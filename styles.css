@@ -1,0 +1,131 @@
+:root {
+    --azulcito: #6E85B7;    
+    --azulcitoclarito: #B2C8DF;    
+    --azulamarillo: #C4D7E0;
+    --amarillito: #F8F9D7;                                 
+}
+body{
+    background-color: var(--amarillito);
+    font-family: 'Quicksand', sans-serif;
+}
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+.titulo {
+    color: var(--azulcito);
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 62px;
+
+}
+.subtitulo {
+    font-size: 40px;
+    color: var(--azulcitoclarito);
+}
+.tarjetas, .tarjetas-ataques {
+    display: flex;
+    gap: 10px;
+}
+.tarjeta-de-mokepon{
+    width: 200px;
+    height: 160px;
+    background-color:var(--azulamarillo);
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.tarjeta-de-mokepon img{
+    width: 100px;
+}
+input {
+    display: none;
+}
+input:checked + label{
+    background-color: var(--azulcitoclarito);
+    border: 4px solid var(--azulcito);
+}
+#boton-mascota{
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid var(--azulcito);
+    color: var(--azulcito);
+    margin-top: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+.boton-de-ataque {
+    width: 100px;
+    background-color:transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid var(--azulcito);
+    cursor: pointer;
+}
+#mensajes {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background-color: var(--azulamarillo);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    color: var(--amarillito);
+}
+#boton-reiniciar{
+    border: none;
+    background-color: transparent;
+    color: var(--azulcito);
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+}
+.ataques {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    text-align: center;
+}
+#vidas-jugador, #vidas-enemigo {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid var(--azulcito);
+    color: var(--azulcito);
+    margin:10px 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+@media (max-width: 1260px) {
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column;
+    }
+}
+@media (max-width: 300px){
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
